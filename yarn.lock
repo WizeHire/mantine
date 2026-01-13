@@ -6334,6 +6334,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@phosphor-icons/react@npm:^2.1.10":
+  version: 2.1.10
+  resolution: "@phosphor-icons/react@npm:2.1.10"
+  peerDependencies:
+    react: ">= 16.8"
+    react-dom: ">= 16.8"
+  checksum: 10c0/9a469e1bdcabcd3db02eda13142d57be250847ebbeb82b33c8900580a6a23ed4f411dbb9b9deacef726ff3fa8ffc960c8868b518e448bd2cee654cedf3fa4bda
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -9182,6 +9192,19 @@ __metadata:
     "@webassemblyjs/ast": "npm:1.11.6"
     "@xtuc/long": "npm:4.2.2"
   checksum: 10c0/916b90fa3a8aadd95ca41c21d4316d0a7582cf6d0dcf6d9db86ab0de823914df513919fba60ac1edd227ff00e93a66b927b15cbddd36b69d8a34c8815752633c
+  languageName: node
+  linkType: hard
+
+"@wizehire/theme@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@wizehire/theme@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40wizehire%2Ftheme%2F1.0.1%2Ff74ac756b24799f32db1da62a31202f7e0366ad6"
+  peerDependencies:
+    "@mantine/carousel": ^7.0.0
+    "@mantine/core": ^7.0.0
+    "@phosphor-icons/react": ^2.0.0
+    clsx: ^2.0.0
+    react: ^18.0.0
+  checksum: 10c0/645e2a03adb7e5ce3b15e076a67bcaef2d87619771011b1f5d02f9fae38226f607f48e8918285b59c95736627001a4c37e0ca6ecb6ece439cfcff8ca2c648e29
   languageName: node
   linkType: hard
 
@@ -12177,6 +12200,7 @@ __metadata:
     "@mdx-js/loader": "npm:^3.0.0"
     "@mdx-js/react": "npm:^3.0.0"
     "@next/mdx": "npm:^14.0.2"
+    "@phosphor-icons/react": "npm:^2.1.10"
     "@tabler/icons-react": "npm:^3.34.1"
     "@tiptap/core": "npm:^3.3.1"
     "@tiptap/extension-code-block": "npm:^3.3.1"
@@ -12198,7 +12222,9 @@ __metadata:
     "@types/github-slugger": "npm:^2.0.0"
     "@types/node": "npm:^24.3.0"
     "@types/react": "npm:19.1.12"
+    "@wizehire/theme": "npm:^1.0.1"
     chroma-js: "npm:^3.1.2"
+    clsx: "npm:^2.1.1"
     dayjs: "npm:^1.11.18"
     embla-carousel: "npm:^8.6.0"
     embla-carousel-autoplay: "npm:^8.6.0"

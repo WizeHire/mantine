@@ -19,7 +19,7 @@ function Demo() {
     <MantineProvider theme={theme}>
       <Group>
         <Button variant="danger">Danger variant</Button>
-        <Button variant="primary">Primary variant</Button>
+        <Button variant="brandPrimary">brandPrimary variant</Button>
       </Group>
     </MantineProvider>
   );
@@ -54,7 +54,7 @@ function Demo() {
     <MantineThemeProvider theme={theme}>
       <Group>
         <Button variant="danger">Danger variant</Button>
-        <Button variant="primary">Primary variant</Button>
+        <Button variant="brandPrimary">brandPrimary variant</Button>
       </Group>
     </MantineThemeProvider>
   );
