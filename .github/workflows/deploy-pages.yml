@@ -18,7 +18,7 @@ jobs:
         id: check
         run: |
           # Only deploy from wizehire organization
-          if [[ "${{ github.repository_owner }}" == "wizehire" ]]; then
+          if [[ "${{ github.repository_owner }}" == "WizeHire" ]]; then
             echo "should-deploy=true" >> $GITHUB_OUTPUT
             echo "✅ Repository owner is ${{ github.repository_owner }} - deployment allowed"
           else
