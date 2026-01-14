@@ -1,3 +1,4 @@
+import '@wizehire/theme/tokens.css';
 import '../styles/variables.css';
 import '../styles/mantine-layers.css';
 import '../styles/tailwind.css';
