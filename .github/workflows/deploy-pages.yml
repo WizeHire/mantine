@@ -56,7 +56,7 @@ jobs:
 
       - name: Configure Yarn for GitHub Packages
         run: |
-          yarn config set npmScopes.wizehire.npmAuthToken "${{ secrets.GITHUB_TOKEN }}"
+          yarn config set npmScopes.wizehire.npmAuthToken "${{ secrets.WIZEHIRE_NPM_TOKEN }}"
           yarn config set npmScopes.wizehire.npmRegistryServer "https://npm.pkg.github.com"
 
       - name: Install dependencies
