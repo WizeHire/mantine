@@ -36,6 +36,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      packages: read
 
     # Prevent concurrent deployments
     concurrency:
@@ -52,6 +53,11 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
+
+      - name: Configure Yarn for GitHub Packages
+        run: |
+          yarn config set npmScopes.wizehire.npmAuthToken "${{ secrets.GITHUB_TOKEN }}"
+          yarn config set npmScopes.wizehire.npmRegistryServer "https://npm.pkg.github.com"
 
       - name: Install dependencies
         run: yarn install --immutable
