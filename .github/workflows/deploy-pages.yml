@@ -1,0 +1,80 @@
+name: Deploy to GitHub Pages
+
+# Only run on the master branch of your fork
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+# Ensure this only runs on your repository
+jobs:
+  check-repository:
+    runs-on: ubuntu-latest
+    outputs:
+      should-deploy: ${{ steps.check.outputs.should-deploy }}
+    steps:
+      - name: Check if running on correct repository
+        id: check
+        run: |
+          # Only deploy from wizehire organization
+          if [[ "${{ github.repository_owner }}" == "wizehire" ]]; then
+            echo "should-deploy=true" >> $GITHUB_OUTPUT
+            echo "✅ Repository owner is ${{ github.repository_owner }} - deployment allowed"
+          else
+            echo "should-deploy=false" >> $GITHUB_OUTPUT
+            echo "⚠️ Repository owner is ${{ github.repository_owner }} - deployment blocked for safety"
+            echo "This workflow only deploys from wizehire repositories"
+          fi
+
+  build-and-deploy:
+    needs: check-repository
+    if: needs.check-repository.outputs.should-deploy == 'true'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    # Prevent concurrent deployments
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+          cache-dependency-path: '**/yarn.lock'
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Generate files for docs
+        run: npm run setup
+
+      - name: Build public packages
+        run: npm run build all
+
+      - name: Build documentation site
+        run: |
+          cd apps/mantine.dev
+          npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'apps/mantine.dev/out'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
