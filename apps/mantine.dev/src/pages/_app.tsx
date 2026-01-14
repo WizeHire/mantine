@@ -1,17 +1,6 @@
-import '@mantine/core/styles.css';
-import '@mantine/dates/styles.css';
-import '@mantine/notifications/styles.css';
-import '@mantine/code-highlight/styles.css';
-import '@mantine/dropzone/styles.css';
-import '@mantine/nprogress/styles.css';
-import '@mantine/spotlight/styles.css';
-import '@mantine/carousel/styles.css';
-import '@mantine/tiptap/styles.css';
-import '@mantine/charts/styles.css';
-import '@mantinex/demo/styles.css';
-import '@mantinex/mantine-logo/styles.css';
-import '@mantinex/mantine-header/styles.css';
-import '@docs/demos/styles.css';
+import '../styles/variables.css';
+import '../styles/mantine-layers.css';
+import '../styles/tailwind.css';
 
 import { AppProps } from 'next/app';
 import Head from 'next/head';

@@ -1,0 +1,15 @@
+/* Import all Mantine styles into the mantine-components layer */
+@import '@mantine/core/styles.css' layer(mantine-components);
+@import '@mantine/dates/styles.css' layer(mantine-components);
+@import '@mantine/notifications/styles.css' layer(mantine-components);
+@import '@mantine/code-highlight/styles.css' layer(mantine-components);
+@import '@mantine/dropzone/styles.css' layer(mantine-components);
+@import '@mantine/nprogress/styles.css' layer(mantine-components);
+@import '@mantine/spotlight/styles.css' layer(mantine-components);
+@import '@mantine/carousel/styles.css' layer(mantine-components);
+@import '@mantine/tiptap/styles.css' layer(mantine-components);
+@import '@mantine/charts/styles.css' layer(mantine-components);
+@import '@mantinex/demo/styles.css' layer(mantine-components);
+@import '@mantinex/mantine-logo/styles.css' layer(mantine-components);
+@import '@mantinex/mantine-header/styles.css' layer(mantine-components);
+@import '@docs/demos/styles.css' layer(mantine-components);

@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import "tailwindcss/theme" layer(mantine-base);
+@import "tailwindcss/preflight" layer(mantine-base);
+@import "tailwindcss/utilities" layer(theme-overrides);
 
 @source "../../src";
 @source "../../../../node_modules/@wizehire/theme/dist";

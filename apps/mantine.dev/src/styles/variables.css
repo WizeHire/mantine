@@ -1,5 +1,5 @@
-/* Define CSS layer order FIRST to ensure Tailwind utilities have highest priority */
-@layer mantine, tailwind-utilities;
+/* Define CSS layer order to allow theme overrides while preserving base Mantine styles */
+@layer mantine-base, mantine-components, theme-overrides;
 
 body {
   --docs-font-primary: 'Outfit', sans-serif;
