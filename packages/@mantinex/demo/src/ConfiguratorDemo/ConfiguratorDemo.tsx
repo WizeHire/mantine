@@ -1,4 +1,5 @@
 import { cloneElement, useState } from 'react';
+import { createTheme, MantineThemeProvider } from '@mantine/core';
 import { DemoAreaProps } from '../DemoArea';
 import { DemoCode } from '../DemoCode';
 import { DemoColumns } from '../DemoColumns';
@@ -30,6 +31,17 @@ const ControlComponents = {
   size: ConfiguratorSizeControl,
   number: ConfiguratorNumberControl,
 };
+
+export const controlsTheme = createTheme({
+  components : {
+    Input: {
+      classNames: {
+        input:
+          'py-0',
+      },
+    },
+  }
+});
 
 export type ConfiguratorControlOptions =
   | ConfiguratorBooleanControlOptions
@@ -82,7 +94,11 @@ export function ConfiguratorDemo({
   return (
     <DemoRoot>
       <DemoColumns
-        controls={items}
+        controls={
+          <MantineThemeProvider theme={controlsTheme}>
+            {items}
+          </MantineThemeProvider>
+        }
         centered={centered}
         withPadding={withPadding}
         maxWidth={maxWidth}

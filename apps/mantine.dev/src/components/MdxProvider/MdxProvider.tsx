@@ -1,5 +1,7 @@
 import { MDXProvider } from '@mdx-js/react';
+import { MantineThemeProvider } from '@mantine/core';
 import { Demo } from '@mantinex/demo';
+import { theme as wizehireTheme } from '@wizehire/theme';
 import { MdxDataTable } from './MdxDataTable/MdxDataTable';
 import { MdxExamplesButton } from './MdxExamplesButton/MdxExamplesButton';
 import { MdxInfo } from './MdxInfo/MdxInfo';
@@ -35,11 +37,20 @@ import { h } from './MdxTitle/MdxTitle';
 import { MdxCode, MdxLi, MdxParagraph, MdxUl } from './MdxTypography/MdxTypography';
 import { MdxVideo } from './MdxVideo/MdxVideo';
 
+// Wrapper to apply Wizehire theme to demo components
+function ThemedDemo(props: any) {
+  return (
+    <MantineThemeProvider theme={wizehireTheme}>
+      <Demo {...props} />
+    </MantineThemeProvider>
+  );
+}
+
 export function MdxProvider({ children }: { children: React.ReactNode }) {
   return (
     <MDXProvider
       components={{
-        Demo,
+        Demo: ThemedDemo,
         GetElementRef: MdxGetElementRef,
         Polymorphic: MdxPolymorphic,
         InputFeatures: MdxInputFeatures,

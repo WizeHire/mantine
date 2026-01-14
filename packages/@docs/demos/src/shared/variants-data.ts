@@ -3,6 +3,7 @@ import { ConfiguratorControlOptions } from '@mantinex/demo';
 export const STATIC_VARIANTS = ['filled', 'light', 'outline', 'transparent', 'white', 'default'];
 
 export const INTERACTIVE_VARIANTS = [
+  'brandPrimary',
   'default',
   'filled',
   'light',
@@ -16,7 +17,7 @@ export const interactiveVariantsControl: ConfiguratorControlOptions = {
   type: 'select',
   prop: 'variant',
   data: INTERACTIVE_VARIANTS,
-  initialValue: 'filled',
+  initialValue: 'brandPrimary',
   libraryValue: '__none__',
 };
 
