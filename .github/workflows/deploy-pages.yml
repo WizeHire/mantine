@@ -76,6 +76,14 @@ jobs:
         run: |
           cd apps/mantine.dev
           npm run build
+          # Ensure .nojekyll exists to disable Jekyll processing
+          touch out/.nojekyll
+
+      - name: Verify .nojekyll exists
+        run: |
+          ls -la apps/mantine.dev/out/.nojekyll
+          echo "Contents of out directory:"
+          ls -la apps/mantine.dev/out/ | head -20
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
