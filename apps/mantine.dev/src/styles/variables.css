@@ -1,3 +1,6 @@
+/* Define CSS layer order FIRST to ensure Tailwind utilities have highest priority */
+@layer mantine, tailwind-utilities;
+
 body {
   --docs-font-primary: 'Outfit', sans-serif;
   --docs-font-size: 15px;

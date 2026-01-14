@@ -15,8 +15,8 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://ats.wizehire.com/static/dist/wh-global.9d4def8f7235.css" />
         <ColorSchemeScript defaultColorScheme="light" />
+        {/* <link rel="stylesheet" href="https://ats.wizehire.com/static/dist/wh-global.9d4def8f7235.css" /> */}
       </Head>
       <body>
         <Main />
