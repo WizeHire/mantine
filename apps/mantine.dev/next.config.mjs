@@ -15,8 +15,8 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   output: 'export',
-  basePath: '/mantine',
-  assetPrefix: '/mantine',
+  basePath: process.env.NODE_ENV === 'production' ? '/mantine' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/mantine' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { IconChevronDown, IconExternalLink } from '@tabler/icons-react';
-import { Burger, Container, Group, Menu, Text, UnstyledButton } from '@mantine/core';
+import { Avatar, Burger, Container, Group, Menu, Text, UnstyledButton } from '@mantine/core';
 import {
   ColorSchemeControl,
   HeaderControls,
@@ -98,7 +98,10 @@ export function DocsHeader({ headerControlsProps, withNav }: DocsHeaderProps) {
 
             <div className={classes.headerMainSection}>
               <Link href="/" className={classes.logoLink}>
-                <MantineLogo size={32} />
+                <Group gap={4}>
+                  <Avatar size="sm" color='var(--color-red-700)'>WH</Avatar>
+                  <MantineLogo size={24} />
+                </Group>
               </Link>
               <div className={classes.mainLinks}>{mainLinks}</div>
             </div>

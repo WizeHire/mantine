@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { IconArrowUpRight } from '@tabler/icons-react';
-import { Box, Button } from '@mantine/core';
+import { Badge, Box, Button, Stack } from '@mantine/core';
 import { GithubIcon } from '@mantinex/dev-icons';
 import { meta } from '@mantinex/mantine-meta';
 import { HomePageContainer } from '../shared/HomePageContainer/HomePageContainer';
@@ -26,10 +26,15 @@ export function HomePageJumbotron() {
           style={{ backgroundImage: `url(${darkImg.src})` }}
         />
         <div className={classes.main}>
-          <HomePageTitle order={1}>
-            A fully featured React
-            <br /> components library
-          </HomePageTitle>
+          <Stack>
+            <Badge color="var(--color-red-700)" c="var(--color-red-300)" size="lg">
+              WizeHire Theme
+            </Badge>
+            <HomePageTitle order={1}>
+              A fully featured React
+              <br /> components library
+            </HomePageTitle>
+          </Stack>
 
           <HomePageDescription>
             Build fully functional accessible web applications faster than ever – Mantine includes
