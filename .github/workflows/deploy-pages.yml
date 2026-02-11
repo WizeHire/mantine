@@ -65,8 +65,9 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
 
-      - name: Configure Yarn for GitHub Packages
+      - name: Configure Yarn
         run: |
+          yarn config set nodeLinker node-modules
           yarn config set npmScopes.wizehire.npmAuthToken "${{ secrets.WIZEHIRE_NPM_TOKEN }}"
           yarn config set npmScopes.wizehire.npmRegistryServer "https://npm.pkg.github.com"
 

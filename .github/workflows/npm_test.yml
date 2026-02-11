@@ -27,6 +27,11 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
+      - name: Configure Yarn
+        run: |
+          yarn config set nodeLinker node-modules
+          yarn config set npmScopes.wizehire.npmRegistryServer "https://npm.pkg.github.com"
+          yarn config set npmScopes.wizehire.npmAuthToken "${{ secrets.WIZEHIRE_NPM_TOKEN }}"
       - name: Install dependencies
         run: yarn
       - name: Generate files for docs
