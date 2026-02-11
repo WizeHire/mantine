@@ -9424,16 +9424,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wizehire/theme@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "@wizehire/theme@npm:1.0.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40wizehire%2Ftheme%2F1.0.5%2F4b793fa775398b2c9a5d8d10f0dc840297c23301"
+"@wizehire/theme@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "@wizehire/theme@npm:1.0.7::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40wizehire%2Ftheme%2F1.0.7%2F3ef28020246c868d381611988dfa1c3b92662e86"
   peerDependencies:
     "@mantine/carousel": ^7.0.0
     "@mantine/core": ^7.0.0
     "@phosphor-icons/react": ^2.0.0
     clsx: ^2.0.0
     react: ^18.0.0
-  checksum: 10c0/c29d99cc785f105946d11536b1971e413dc23788e80e94d09a0c5e23ea279e624166c67db79986a88d438071871d377fbbadc078637501cf532e3eb3c5c95704
+  checksum: 10c0/45afd6451cf1f692d68b1f678d7736b2d91be6f4df3c78b794014e6059d3b2bc3fa6e2a63edf7264ab5c070bc7d9507d61f10b4dd8fd5fab67fd4896e941c013
   languageName: node
   linkType: hard
 
@@ -12500,7 +12500,7 @@ __metadata:
     "@types/github-slugger": "npm:^2.0.0"
     "@types/node": "npm:^24.3.0"
     "@types/react": "npm:19.1.12"
-    "@wizehire/theme": "npm:^1.0.5"
+    "@wizehire/theme": "npm:^1.0.7"
     autoprefixer: "npm:^10.4.23"
     chroma-js: "npm:^3.1.2"
     clsx: "npm:^2.1.1"
