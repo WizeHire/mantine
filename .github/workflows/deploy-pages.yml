@@ -74,15 +74,15 @@ jobs:
         run: yarn install --immutable
 
       - name: Generate files for docs
-        run: npm run setup
+        run: yarn setup
 
       - name: Build public packages
-        run: npm run build all
+        run: yarn build all
 
       - name: Build documentation site
         run: |
           cd apps/mantine.dev
-          npm run build
+          yarn build
           # Ensure .nojekyll exists to disable Jekyll processing
           touch out/.nojekyll
 

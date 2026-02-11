@@ -30,8 +30,8 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Generate files for docs
-        run: npm run setup
+        run: yarn setup
       - name: Build public packages
-        run: npm run build all
+        run: yarn build all
       - name: Run tests
-        run: npm test
+        run: yarn test
