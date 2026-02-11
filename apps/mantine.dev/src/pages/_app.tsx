@@ -5,6 +5,7 @@ import '../styles/tailwind.css';
 
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { CodeHighlightAdapterProvider, createShikiAdapter } from '@mantine/code-highlight';
 import { DirectionProvider, MantineProvider } from '@mantine/core';
 import { MantineEmotionProvider } from '@mantine/emotion';
@@ -37,6 +38,7 @@ async function loadShiki() {
 const shikiAdapter = createShikiAdapter(loadShiki);
 
 export default function App({ Component, pageProps, router }: AppProps) {
+  const { basePath } = useRouter();
   const shouldRenderShell = !excludeShell.includes(router.pathname);
   const [navbarOpened, setNavbarOpened] = useLocalStorage({
     key: 'mantine-navbar-opened',
@@ -49,7 +51,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <>
       <Head>
         <title>Mantine</title>
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href={`${basePath}/favicon.svg`} />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
